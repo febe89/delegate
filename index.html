@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link rel="stylesheet" href="Integration.css"> -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delegate Form Project - Imran Ahmed</title>
+    <style>
+      body {
+        padding: 10px;
+        margin: 10px;
+        height: auto;
+        width: auto;
+      }
+
+      /*  */
+
+      .fields .input-field {
+        display: flex;
+        width: calc(100% / 3 - 15px);
+        flex-direction: column;
+        margin: 4px 0;
+      }
+
+      .input-field label {
+        font-size: 17px;
+        font-weight: bold;
+        color: #2e2e2e;
+      }
+
+      .input-field input,
+      select {
+        outline: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        padding: 0 15px;
+        height: 42px;
+        margin: 8px 0;
+      }
+
+      form .fields {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .productlabel {
+        margin-right: 10%;
+        display: block;
+        width: x;
+        height: y;
+        text-align: right;
+        font-size: large;
+      }
+
+      .btn {
+        margin: 15px;
+        padding: 15px;
+        background-color: rgb(25, 25, 88);
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        width: 190px;
+      }
+
+      .btn:hover {
+        background-color: white;
+        color: rgb(25, 25, 88);
+        border: 2px solid rgb(25, 25, 88);
+        transition: 0.8s all;
+      }
+
+      .dataTable td {
+        border: 1px solid black;
+        padding: 6px;
+      }
+
+      .dataTable td:first-child {
+        width: 48%;
+      }
+      .btable {
+        border: 1px solid black;
+      }
+
+      #delegates {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reqform">
+      <h1 style="text-align: center">Delegate Form - Shaikh Quadeer</h1>
+    </div>
+    <div class="mane">
+      <div id="name">
+        <form>
+          <label for="Delegates">How Many Delegates to Register</label>
+          <select onchange="generateForm()" name="delegate" id="delegate" class="Dropdown" class="custom-select">
+            <option value="0">Please Select ..</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <hr />
+          <div id="repeat">
+            <input class="btn" type="button" value="Show Grand Total" />
+            <input class="btn" type="button" value="Next" />
+            <input class="btn" type="button" id="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="data"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
